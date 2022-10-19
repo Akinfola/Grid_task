@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700&family=Lexend+Deca:wght@100;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Lobster&family=Pacifico&family=Recursive:wght@300;400;500;700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100;0,8..144,300;0,8..144,500;0,8..144,600;0,8..144,700;0,8..144,800;0,8..144,900;1,8..144,100;1,8..144,200;1,8..144,500;1,8..144,900&family=Satisfy&family=Spline+Sans+Mono:wght@300;400;500;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+nav {
+    padding: 0 2rem;
+    height: 3rem;
+    overflow: hidden;
+    transition: height 1s ease-in-out;
+    background-color: black;
+    border-bottom: 4px double #61a5c2;
+}
+
+.flexBox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+nav h1{
+    font-size: 1.9rem;
+        padding: 0.5rem 0;
+        display: block;
+        letter-spacing: 0.5rem;
+        -webkit-text-fill-color: transparent;
+        background-color: #61a5c2;
+        -webkit-background-clip: text;
+        text-transform: uppercase;
+        font-family: 'Lobster', cursive;
+        font-weight: 700;
+}
+
+nav a{
+    text-decoration: none;
+    padding: .7rem;
+    font-size: 1.5rem !important;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #ff9f1c;
+
+}
+
+nav a:hover{
+    color: #61a5c2;
+}
+
+.container{
+    width: 100%;
+}
+
+
+.carrier{
+    width: 70%;
+    height: 100%;
+    margin: 4% auto;
+    display: flex;
+}
+
+.carrier div{
+    padding: 2.7rem 2.2rem 3.5rem 2.2rem;
+    height: 100%;
+    width: 100%;
+}
+
+.carrier div > img, h1{
+    padding-bottom: 1.5rem;
+}
+
+.carrier div > p{
+    padding-bottom: 4.8rem;
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 1.5rem;
+    width: 85%;
+}
+
+.carrier div > p, a{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+
+}
+
+.carrier div > h1{
+    color: hsla(0, 0%, 100%, 954);
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.sedans{
+    background-color: hsl(31, 77%, 52%);
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.sedans a{
+    color: hsl(31, 77%, 52%);
+
+}
+
+.suv{
+    background-color: hsl(184, 100%, 22%);
+}
+
+.suv a{
+    color: hsl(184, 100%, 22%);
+}
+
+.luxury{
+    background-color: hsl(179, 100%, 13%);
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.luxury a{
+    color: hsl(179, 100%, 13%);
+}
+
+.carrier div > a {
+    background-color: white;
+    border-radius: 25px;
+    padding: 0.9rem 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.carrier div > a:hover{
+    background-color: transparent;
+    cursor: pointer;
+    border: 2px solid white;
+    color: white;
+}
+
+.grid-body{
+    background-color: black;
+}
+
+.grid-container{
+    width: 42%;
+    margin: 5% auto;
+    height: 390px;
+    display: grid;
+    grid-template-areas: 'red red red red red red orange orange orange'
+                         'red red red red red red orange orange orange '
+                         'green green green green blue blue blue blue blue'
+                         'green green green green purple purple purple purple purple';
+
+    gap: 14px;
+}
+
+.grid-container div{
+    width: 100%;
+    height: 100% !important;
+}
+
+.item1{grid-area: red;
+background-color: orangered;}
+
+.item2{grid-area: orange;
+background-color: orange;}
+
+.item3{grid-area: green;
+background-color: rgb(38, 173, 38);}
+
+.item4{grid-area: blue;
+background-color: rgb(27, 154, 233);}
+
+.item5{grid-area: purple;
+background-color: rgb(27, 154, 233);
+}
+
+.nav .toggle-collapse {
+    position: absolute !important;
+    top: 0;
+    right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+.nav .toggle-collapse .toggle-icons {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.5rem 0;
+
+}
+
+.nav .toggle-collapse .toggle-icons i {
+    font-size: 1.5rem;
+    border: 2px solid white;
+    color:#61a5c2;
+    padding: 0.2rem 0.5rem;
+}
+
+.collapse {
+    height: 12rem !important;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 940px){
+
+    .container{
+        width: 100%;
+    }
+    .carrier{
+        flex-direction: column;
+    }
+
+    .carrier div{
+        width: 100%;
+    }
+
+    .sedans{
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .luxury{
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .grid-container{
+        margin-top: 9%;
+    }
+
+    
+}
+
+@media only screen and (max-width: 500px){
+    nav .toggle-collapse {
+            display: initial !important;
+    
+    }
+
+    .flexBox {
+            flex-direction: column;
+        }
+
+    .carrier div{
+        width: 100%;
+    }
+
+    .carrier {
+        margin: 7% auto;
+    }
+
+    .carrier div > p{
+        width: 100%;
+    }
+}
+
+@media only screen and (width: 1024px){
+    .carrier div{
+        height: auto !important;
+    }
+}
+
+@media only screen and (width: 2560px){
+    .luxury p{
+        width: 80% !important;
+    }
+}
